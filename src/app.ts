@@ -1,11 +1,19 @@
-class Circle {
+
+class Shape {
   public readonly color: string;
   public readonly name: string;
+
+  constructor(color: string, name: string) {
+    this.color = color;
+    this.name = name;
+  }
+}
+
+class Circle extends Shape {
   public readonly radius: number;
 
   constructor(color: string, name: string, radius: number) {
-    this.color = color;
-    this.name = name;
+    super(color, name);
     this.radius = radius;
   }
 
@@ -14,15 +22,12 @@ class Circle {
   }
 }
 
-class Rectangle {
-  public readonly color: string;
-  public readonly name: string;
+class Rectangle extends Shape {
   public readonly width: number;
   public readonly height: number;
 
   constructor(color: string, name: string, width: number, height: number) {
-    this.color = color;
-    this.name = name;
+    super(color, name);
     this.width = width;
     this.height = height;
   }
@@ -36,14 +41,11 @@ class Rectangle {
   }
 }
 
-class Square {
-  public readonly color: string;
-  public readonly name: string;
+class Square extends Shape {
   public readonly side: number;
 
   constructor(color: string, name: string, side: number) {
-    this.color = color;
-    this.name = name;
+    super(color, name);
     this.side = side;
   }
 
@@ -56,17 +58,15 @@ class Square {
   }
 }
 
-class Triangle {
-  public readonly color: string;
-  public readonly name: string;
+class Triangle extends Shape {
   // Add properties specific to Triangle
+
   constructor(color: string, name: string) {
-    this.color = color;
-    this.name = name;
+    super(color, name);
   }
 
   public calculateArea(): number {
-  // Add logic to calculate area of Triangle
-  return 0; // Placeholder return statement
-}
+    // Add logic to calculate area of Triangle
+    return 0; // Placeholder return statement
+  }
 }
