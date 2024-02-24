@@ -52,21 +52,19 @@ class Square extends Shape {
   public calculateArea(): number {
     return this.side * this.side;
   }
-
+  
   public print(): void {
     console.log(`Area = side * side`);
   }
 }
 
 class Triangle extends Shape {
-  // Add properties specific to Triangle
-
   constructor(color: string, name: string) {
     super(color, name);
   }
 
   public calculateArea(): number {
-    // Add logic to calculate area of Triangle
-    return 0; // Placeholder return statement
+    
+    return 0; 
   }
 }
