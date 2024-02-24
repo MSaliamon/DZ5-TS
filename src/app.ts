@@ -1,5 +1,4 @@
-
-class Shape {
+abstract class Shape {
   public readonly color: string;
   public readonly name: string;
 
@@ -7,6 +6,8 @@ class Shape {
     this.color = color;
     this.name = name;
   }
+
+  abstract calculateArea(): number;
 }
 
 class Circle extends Shape {
@@ -64,7 +65,6 @@ class Triangle extends Shape {
   }
 
   public calculateArea(): number {
-    
     return 0; 
   }
 }
